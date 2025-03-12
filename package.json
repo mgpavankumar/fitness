@@ -1,0 +1,14 @@
+{
+  "name": "fitness",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node src/tracker.ts"
+  },
+  "author": "pavan",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}
