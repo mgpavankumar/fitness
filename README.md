@@ -1,5 +1,7 @@
 # Fitness & Workout Tracker · TypeScript
 
+[![CI](https://github.com/mgpavankumar/fitness/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mgpavankumar/fitness/actions/workflows/ci.yml)
+
 An in-memory tracker for user profiles and workout logs.
 
 **Author:** [M. G. Pavan Kumar](https://github.com/mgpavankumar)
@@ -52,6 +54,10 @@ See [TEST_RESULTS.md](TEST_RESULTS.md) for recorded local verification and its l
 ## Current behavior and limitations
 
 Records are held in memory and disappear when the process stops.
+
+## Demonstration
+
+`npm start` creates a synthetic user, logs running and yoga workouts, filters running workouts, and updates the profile's weight from 75 to 76. IDs and timestamps vary between runs. The reusable class is [FitnessTracker](src/FitnessTracker.ts).
 
 ## Contributing
 
