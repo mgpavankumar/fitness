@@ -1,20 +1,19 @@
 # Fitness & Workout Tracker · TypeScript
 
-An in-memory fitness tracker for user profiles and workout logs, built as a TypeScript learning project.
+An in-memory tracker for user profiles and workout logs.
 
-**Author:** [M. G. Pavan Kumar](https://github.com/mgpavankumar)  
+**Author:** [M. G. Pavan Kumar](https://github.com/mgpavankumar)
 **Status:** Educational project
 
 ## Features
 
-- Create user profiles with UUID identifiers
-- Log workout type, duration, calories, and date
-- Retrieve workouts and filter them by type
-- View and update user details
+- Create and update validated user profiles
+- Log workouts and filter them by type
+- Protect stored user and workout records from external mutation
 
 ## Getting started
 
-Install Node.js and npm. Clone this repository:
+Install Node.js 22 or newer and npm. Clone this repository:
 
 ```bash
 git clone https://github.com/mgpavankumar/fitness.git
@@ -22,32 +21,38 @@ cd fitness
 ```
 
 ```bash
-npm install
-npm exec --package=tsx -- tsx src/tracker.ts
+npm ci
 ```
+
+```bash
+npm run build
+npm start
+```
+
+`npm start` runs the TypeScript entry point with the Node.js `tsx` loader. `npm run build` emits JavaScript into `dist/src`. `npm run dev` watches source files.
+
+## Tests
+
+```bash
+npm run typecheck
+npm test
+```
+
+See [TEST_RESULTS.md](TEST_RESULTS.md) for recorded local verification and its limits.
 
 ## Project structure
 
 | Path | Purpose |
 | --- | --- |
-| `src/tracker.ts` | User types, tracker class, and running/yoga demonstration |
-| `package.json` | UUID dependency and existing start script |
-| `tsconfig.json` | Compiler configuration |
+| `src/FitnessTracker.ts` | Application logic and/or demonstration |
+| `src/tracker.ts` | Application logic and/or demonstration |
+| `tests/` | Automated regression checks |
+| `tsconfig.json` | Strict ESM compilation settings |
 
 ## Current behavior and limitations
 
-The command uses a temporary `tsx` runner because the current start script calls `ts-node`, which is not declared in package.json. The compiler configuration includes source patterns that do not match the files and references Node types that are not declared as a direct dependency. Profile updates do not repeat creation-time validation. All records exist only in memory.
-
-## Planned improvements
-
-- Declare a local runner and compiler dependencies
-- Repair TypeScript source inclusion
-- Validate profile updates and add persistent storage
+Records are held in memory and disappear when the process stops.
 
 ## Contributing
 
-Open an issue describing the problem or proposed improvement. Keep pull requests focused and include the steps used to verify changes. Use sample data and keep credentials out of commits.
-
-## Verification
-
-This documentation was checked against the committed source files, dependency declarations, and route definitions. Installation, compilation, database setup, and runtime behavior have not been verified by this documentation update. There is no automated test suite in the current repository.
+Keep changes focused, use synthetic data, and include steps or tests demonstrating the fix. Do not commit local configuration or credentials.
