@@ -1,6 +1,6 @@
 # Fitness & Workout Tracker · TypeScript
 
-[![CI](https://github.com/mgpavankumar/fitness/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mgpavankumar/fitness/actions/workflows/ci.yml)
+[![CI](https://github.com/mgpavankumar/fitness-workout-tracker/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mgpavankumar/fitness-workout-tracker/actions/workflows/ci.yml)
 
 An in-memory tracker for user profiles and workout logs.
 
@@ -18,8 +18,8 @@ An in-memory tracker for user profiles and workout logs.
 Install Node.js 22 or newer and npm. Clone this repository:
 
 ```bash
-git clone https://github.com/mgpavankumar/fitness.git
-cd fitness
+git clone https://github.com/mgpavankumar/fitness-workout-tracker.git
+cd fitness-workout-tracker
 ```
 
 ```bash
